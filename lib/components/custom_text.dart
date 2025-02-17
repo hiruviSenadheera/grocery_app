@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:grocery_app/utils/constants/app_colors.dart';
 
 class CustomText extends StatelessWidget {
   const CustomText(
@@ -20,13 +19,13 @@ class CustomText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text(
-      "Shop Your Daily \nNecessary",
-      textAlign: TextAlign.center,
+    return Text(
+      text,
+      textAlign: textAlign,
       style: TextStyle(
-        fontSize: 30,
-        fontWeight: FontWeight.bold,
-        color: AppColors.primaryColor
+        fontSize: fontSize,
+        fontWeight: fontWeight,
+        color: color
       )
       );
   }

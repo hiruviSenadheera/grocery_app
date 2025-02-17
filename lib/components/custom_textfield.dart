@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_app/components/custom_text.dart';
 import 'package:grocery_app/utils/constants/app_colors.dart';
 
 class CustomTextfield extends StatelessWidget {
@@ -35,11 +36,9 @@ class CustomTextfield extends StatelessWidget {
           hintStyle: const TextStyle(
               color: AppColors.ashColor,
             ),
-          label: Text(
+          label: CustomText(
             labelText,
-            style: const TextStyle(
               color: AppColors.ashColor,
-            ),
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(4),

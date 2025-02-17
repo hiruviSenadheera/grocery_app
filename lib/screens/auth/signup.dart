@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_app/components/app_logo.dart';
+import 'package:grocery_app/components/custom_text.dart';
 import 'package:grocery_app/components/custom_textfield.dart';
 import 'package:grocery_app/utils/constants/app_colors.dart';
 
@@ -23,13 +24,11 @@ class _SignupState extends State<Signup> {
               children: [
           
                 //child 1
-                const Text(
+                const CustomText(
                   "Signup",
-                  style: TextStyle(
-                    fontSize: 25,
-                    color: AppColors.primaryColor,
-                    fontWeight: FontWeight.bold
-                  ),
+                  fontSize: 25,
+                  color: AppColors.primaryColor,
+                  fontWeight: FontWeight.bold,
                 ),
           
                 const SizedBox(height: 41,),
@@ -67,13 +66,11 @@ class _SignupState extends State<Signup> {
                 //child 6
                 const Align(
                   alignment: Alignment.centerRight,
-                  child: Text(
+                  child: CustomText(
                     "Already have an account?",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w500,
+                    fontWeight: FontWeight.w500,
                     ),
                   ),
-                ),
         
                 const SizedBox(height: 24,),
         
@@ -94,12 +91,10 @@ class _SignupState extends State<Signup> {
                       ),
                     ]
                   ),
-                  child: const Text(
+                  child: const CustomText(
                     "SignUp",
-                    style: TextStyle(
                       color: Colors.white,
-                      fontSize: 18,
-                    ),
+                      fontSize: 18,                   
                   ),
                 ),
                 
