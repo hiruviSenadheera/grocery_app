@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_app/utils/constants/app_assets.dart';
 
 class Splash extends StatefulWidget {
   const Splash({super.key});
@@ -19,7 +20,7 @@ class _SplashState extends State<Splash> {
       
             //child 1
             Image.asset(
-              "assets/icons/logo.png",
+              AppAssets.logo,
               width: 331,
               height: 225,
               fit: BoxFit.fill,
