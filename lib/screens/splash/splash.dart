@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_app/utils/constants/app_assets.dart';
+import 'package:grocery_app/utils/constants/app_colors.dart';
 
 class Splash extends StatefulWidget {
   const Splash({super.key});
@@ -35,7 +36,7 @@ class _SplashState extends State<Splash> {
               style: TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
-                color: Color(0xff0FA956)
+                color: AppColors.primaryColor
               )
               ),
       
