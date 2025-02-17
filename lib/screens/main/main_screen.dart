@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_app/components/bottom_navtile.dart';
+import 'package:grocery_app/screens/main/home/home.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -22,7 +23,8 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: Container(
+      body: Home(),
+      bottomNavigationBar: SizedBox(
         height: 83,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
