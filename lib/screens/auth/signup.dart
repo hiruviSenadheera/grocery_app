@@ -5,6 +5,7 @@ import 'package:grocery_app/components/custom_text.dart';
 import 'package:grocery_app/components/custom_textfield.dart';
 import 'package:grocery_app/screens/auth/login.dart';
 import 'package:grocery_app/utils/constants/app_colors.dart';
+import 'package:grocery_app/utils/helpers/helpers.dart';
 
 class Signup extends StatefulWidget {
   const Signup({super.key});
@@ -70,12 +71,7 @@ class _SignupState extends State<Signup> {
                   alignment: Alignment.centerRight,
                   child: InkWell(
                     onTap: (){
-                      Navigator.push(
-                        context, 
-                        MaterialPageRoute(
-                          builder: (context)=>Login()
-                        )
-                      );
+                      Helpers.navigateTo(context, Login());
                     },
                     child: const CustomText(
                       "Already have an account?",
