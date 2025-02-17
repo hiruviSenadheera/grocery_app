@@ -1,5 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:grocery_app/components/app_logo.dart';
 import 'package:grocery_app/utils/constants/app_assets.dart';
 import 'package:grocery_app/utils/constants/app_colors.dart';
 
@@ -31,17 +32,11 @@ class _SignupState extends State<Signup> {
             const SizedBox(height: 41,),
 
             //child 2
-            FadeInDown(
-              child: Image.asset(
-                AppAssets.logo,
-                width: 202,
-                height: 138,
-                fit: BoxFit.fill,
-              ),
-            ),
+            AppLogo(),
           ],
         ),
       ),
     );
   }
 }
+
