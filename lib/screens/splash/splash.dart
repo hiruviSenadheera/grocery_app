@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_app/screens/auth/signup.dart';
 import 'package:grocery_app/utils/constants/app_assets.dart';
 import 'package:grocery_app/utils/constants/app_colors.dart';
 
@@ -10,6 +11,22 @@ class Splash extends StatefulWidget {
 }
 
 class _SplashState extends State<Splash> {
+
+  @override
+  void initState() {
+
+    //delay for 2 seconds and navigate to the signup
+    Future.delayed(Duration(seconds: 2),(){
+      Navigator.push(
+        context, 
+        MaterialPageRoute(
+          builder: (context) => Signup()
+        )
+      );
+    });
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
