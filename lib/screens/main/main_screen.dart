@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:grocery_app/utils/constants/app_colors.dart';
+import 'package:grocery_app/components/bottom_navtile.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -9,6 +9,10 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
+
+  //TO STORE THE ACTIVE BOTTOM BAR INDEX
+  final int _activeIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,41 +21,38 @@ class _MainScreenState extends State<MainScreen> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            IconButton(
-              onPressed: (){}, 
-              icon: const Icon(
-                Icons.home,
-                size: 33,
-                color: AppColors.primaryColor,
-              )
+            BottomNavTile(
+              icon: Icons.home,
+              isActive: _activeIndex==0,
+              onTap: () {
+                
+              },
             ),
-            IconButton(
-              onPressed: (){}, 
-              icon: const Icon(
-                Icons.favorite_border,
-                size: 33,
-                color: AppColors.ashColor,
-              )
+            BottomNavTile(
+              icon: Icons.favorite_border,
+              isActive: _activeIndex==1,
+              onTap: () {
+                
+              },
             ),
-            IconButton(
-              onPressed: (){}, 
-              icon: const Icon(
-                Icons.search,
-                size: 33,
-                color: AppColors.ashColor,
-              )
+            BottomNavTile(
+              icon: Icons.search,
+              isActive: _activeIndex==2,
+              onTap: () {
+                
+              },
             ),
-            IconButton(
-              onPressed: (){}, 
-              icon: const Icon(
-                Icons.person,
-                size: 33,
-                color: AppColors.ashColor,
-              )
-            )
+            BottomNavTile(
+              icon: Icons.person,
+              isActive: _activeIndex==3,
+              onTap: () {
+                
+              },
+            ),
           ],
         )
       ),
     );
   }
 }
+
