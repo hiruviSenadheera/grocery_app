@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:grocery_app/components/app_logo.dart';
 import 'package:grocery_app/components/custom_button.dart';
 import 'package:grocery_app/components/custom_text.dart';
 import 'package:grocery_app/components/custom_textfield.dart';
+import 'package:grocery_app/components/social_button.dart';
+import 'package:grocery_app/utils/constants/app_assets.dart';
 import 'package:grocery_app/utils/constants/app_colors.dart';
 
 class Login extends StatefulWidget {
@@ -93,6 +96,28 @@ class _LoginState extends State<Login> {
                 const SizedBox(height: 12,),
 
                 //child 9
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SocialButton(
+                      path: AppAssets.google,
+                      onTap: () {
+                        
+                      },
+                    ),
+
+                    const SizedBox(width: 16,),
+
+                    SocialButton(
+                      path: AppAssets.fb,
+                      onTap: () {
+                        
+                      },
+                    ),
+                  ],
+                ),
+
+                
               ],
             ),
           ),
