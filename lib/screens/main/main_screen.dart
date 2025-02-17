@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_app/components/bottom_navtile.dart';
+import 'package:grocery_app/screens/main/Search/search.dart';
+import 'package:grocery_app/screens/main/favourite/favourite.dart';
 import 'package:grocery_app/screens/main/home/home.dart';
+import 'package:grocery_app/screens/main/profile/profile.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -14,16 +17,25 @@ class _MainScreenState extends State<MainScreen> {
   //TO STORE THE ACTIVE BOTTOM BAR INDEX
   int _activeIndex = 0;
 
+  // TRIGGER WHEN BOTTOM BAR ITEM IS CLICKED
   void onItemTapped(int i){
       setState(() {
            _activeIndex = i;       
       });
   }
 
+  //SCREENS LIST
+  final List<Widget> _screens = [
+    Home(),
+    Favourite(),
+    Search(),
+    Profile(),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Home(),
+      body: _screens[_activeIndex],
       bottomNavigationBar: SizedBox(
         height: 83,
         child: Row(
