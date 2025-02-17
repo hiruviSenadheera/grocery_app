@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:grocery_app/components/app_logo.dart';
 import 'package:grocery_app/components/custom_text.dart';
 import 'package:grocery_app/screens/auth/signup.dart';
-import 'package:grocery_app/utils/constants/app_assets.dart';
 import 'package:grocery_app/utils/constants/app_colors.dart';
 
 class Splash extends StatefulWidget {
@@ -19,11 +18,11 @@ class _SplashState extends State<Splash> {
   void initState() {
 
     //delay for 2 seconds and navigate to the signup
-    Future.delayed(Duration(seconds: 2),(){
+    Future.delayed(const Duration(seconds: 2),(){
       Navigator.push(
         context, 
         MaterialPageRoute(
-          builder: (context) => Signup()
+          builder: (context) => const Signup()
         )
       );
     });
@@ -53,7 +52,7 @@ class _SplashState extends State<Splash> {
                 "Shop Your Daily \nNecessary",
                 fontSize: 30,
                 color: AppColors.primaryColor,
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w500,
               ),
             ),
       

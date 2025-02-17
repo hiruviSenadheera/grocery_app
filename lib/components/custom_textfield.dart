@@ -23,7 +23,7 @@ class CustomTextfield extends StatelessWidget {
         [
           BoxShadow(
             color: AppColors.ashColor.withOpacity(.3),
-            offset: Offset(0, 0),
+            offset: const Offset(0, 0),
             blurRadius: 10,
           ),
         ]
@@ -37,7 +37,7 @@ class CustomTextfield extends StatelessWidget {
             ),
           label: Text(
             labelText,
-            style: TextStyle(
+            style: const TextStyle(
               color: AppColors.ashColor,
             ),
           ),
