@@ -49,6 +49,22 @@ class _HomeState extends State<Home> {
             const SizedBox(height: 41,),
 
             //child 3
+            Expanded(
+              child: GridView.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  childAspectRatio: 0.75,
+                  crossAxisSpacing: 19,
+                  mainAxisSpacing: 44,
+                ), 
+                itemCount: 10,
+                itemBuilder: (context, index) {
+                  return Container(
+                    color: Colors.amber,
+                  );
+                },
+              ),
+            ),
 
           ],
         ),
