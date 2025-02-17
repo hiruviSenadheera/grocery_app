@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:grocery_app/components/app_logo.dart';
+import 'package:grocery_app/components/common_back_button.dart';
 import 'package:grocery_app/components/custom_button.dart';
 import 'package:grocery_app/components/custom_text.dart';
 import 'package:grocery_app/components/custom_textfield.dart';
 import 'package:grocery_app/components/social_button.dart';
+import 'package:grocery_app/screens/auth/forgot_password.dart';
 import 'package:grocery_app/utils/constants/app_assets.dart';
 import 'package:grocery_app/utils/constants/app_colors.dart';
 
@@ -28,12 +29,9 @@ class _LoginState extends State<Login> {
               children: [
       
                 //child 1
-                Align(
+                const Align(
                   alignment: Alignment.topLeft,
-                  child: IconButton(
-                    onPressed: (){}, 
-                    icon: const Icon(Icons.arrow_back_ios),
-                  ),
+                  child: CommonBackButton(),
                 ),
           
                 //child 2
@@ -69,12 +67,22 @@ class _LoginState extends State<Login> {
                 const SizedBox(height: 12,),
         
                 //child 6
-                const Align(
+                Align(
                   alignment: Alignment.centerRight,
-                  child: CustomText(
-                    "Forgot your password?",
-                    fontWeight: FontWeight.w500,
-                    ),
+                  child: InkWell(
+                    onTap: (){
+                      Navigator.push(
+                        context, 
+                        MaterialPageRoute(
+                          builder: (context) => ForgotPassword()
+                        )
+                      );
+                    },
+                    child: const CustomText(
+                      "Forgot your password?",
+                      fontWeight: FontWeight.w500,
+                      ),
+                  ),
                   ),
         
                 const SizedBox(height: 24,),
