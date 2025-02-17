@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:grocery_app/screens/auth/signup.dart';
 import 'package:grocery_app/utils/constants/app_assets.dart';
@@ -37,25 +38,29 @@ class _SplashState extends State<Splash> {
           children: [
       
             //child 1
-            Image.asset(
-              AppAssets.logo,
-              width: 331,
-              height: 225,
-              fit: BoxFit.fill,
+            FadeInDown(
+              child: Image.asset(
+                AppAssets.logo,
+                width: 331,
+                height: 225,
+                fit: BoxFit.fill,
+              ),
             ),
       
             const SizedBox(height: 72,),
       
             //child 2
-            const Text(
-              "Shop Your Daily \nNecessary",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-                color: AppColors.primaryColor
-              )
-              ),
+            FadeInUp(
+              child: const Text(
+                "Shop Your Daily \nNecessary",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  color: AppColors.primaryColor
+                )
+                ),
+            ),
       
           ],
         ),
