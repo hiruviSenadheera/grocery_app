@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_app/components/app_logo.dart';
+import 'package:grocery_app/components/custom_button.dart';
 import 'package:grocery_app/components/custom_text.dart';
 import 'package:grocery_app/components/custom_textfield.dart';
 import 'package:grocery_app/utils/constants/app_colors.dart';
@@ -15,13 +16,21 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
+      body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+      
+                Align(
+                  alignment: Alignment.topLeft,
+                  child: IconButton(
+                    onPressed: (){}, 
+                    icon: const Icon(Icons.arrow_back_ios),
+                  ),
+                ),
           
                 //child 1
                 const CustomText(
@@ -38,7 +47,7 @@ class _LoginState extends State<Login> {
         
                 const SizedBox(height: 30,),
           
-                //child 4
+                //child 3
                 const CustomTextfield(
                   hintText: "Enter your email here",
                   labelText: "Email",
@@ -46,7 +55,7 @@ class _LoginState extends State<Login> {
         
                 const SizedBox(height: 7,),
         
-                //child 5
+                //child 4
                 const CustomTextfield(
                   hintText: "Enter your password here",
                   labelText: "Password",
@@ -55,7 +64,7 @@ class _LoginState extends State<Login> {
         
                 const SizedBox(height: 12,),
         
-                //child 6
+                //child 5
                 const Align(
                   alignment: Alignment.centerRight,
                   child: CustomText(
@@ -66,29 +75,13 @@ class _LoginState extends State<Login> {
         
                 const SizedBox(height: 24,),
         
-                //child 7
-                Container(
-                  width: 259,
-                  height: 50,
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    color: AppColors.primaryColor,
-                    borderRadius: BorderRadius.circular(8),
-                    boxShadow: 
-                    [
-                      BoxShadow(
-                        color: AppColors.ashColor.withOpacity(.3),
-                        offset: const Offset(0, 2),
-                        blurRadius: 10,
-                      ),
-                    ]
-                  ),
-                  child: const CustomText(
-                    "Login",
-                      color: Colors.white,
-                      fontSize: 18,                   
-                  ),
+                //child 6
+                CustomButton(
+                  text: "Login",
+                  onTap: (){},
                 ),
+      
+                //child 7
                 
               ],
             ),

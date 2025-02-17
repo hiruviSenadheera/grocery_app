@@ -3,6 +3,7 @@ import 'package:grocery_app/components/app_logo.dart';
 import 'package:grocery_app/components/custom_button.dart';
 import 'package:grocery_app/components/custom_text.dart';
 import 'package:grocery_app/components/custom_textfield.dart';
+import 'package:grocery_app/screens/auth/login.dart';
 import 'package:grocery_app/utils/constants/app_colors.dart';
 
 class Signup extends StatefulWidget {
@@ -65,12 +66,22 @@ class _SignupState extends State<Signup> {
                 const SizedBox(height: 12,),
         
                 //child 6
-                const Align(
+                Align(
                   alignment: Alignment.centerRight,
-                  child: CustomText(
-                    "Already have an account?",
-                    fontWeight: FontWeight.w500,
-                    ),
+                  child: InkWell(
+                    onTap: (){
+                      Navigator.push(
+                        context, 
+                        MaterialPageRoute(
+                          builder: (context)=>Login()
+                        )
+                      );
+                    },
+                    child: const CustomText(
+                      "Already have an account?",
+                      fontWeight: FontWeight.w500,
+                      ),
+                  ),
                   ),
         
                 const SizedBox(height: 24,),
