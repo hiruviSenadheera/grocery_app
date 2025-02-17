@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_app/components/app_logo.dart';
-import 'package:grocery_app/components/custom_button.dart';
 import 'package:grocery_app/components/custom_text.dart';
 import 'package:grocery_app/components/custom_textfield.dart';
 import 'package:grocery_app/utils/constants/app_colors.dart';
 
-class Signup extends StatefulWidget {
-  const Signup({super.key});
+class Login extends StatefulWidget {
+  const Login({super.key});
 
   @override
-  State<Signup> createState() => _SignupState();
+  State<Login> createState() => _LoginState();
 }
 
-class _SignupState extends State<Signup> {
+class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +25,7 @@ class _SignupState extends State<Signup> {
           
                 //child 1
                 const CustomText(
-                  "Signup",
+                  "Login",
                   fontSize: 25,
                   color: AppColors.primaryColor,
                   fontWeight: FontWeight.bold,
@@ -39,14 +38,6 @@ class _SignupState extends State<Signup> {
         
                 const SizedBox(height: 30,),
           
-                //child 3
-                const CustomTextfield(
-                  hintText: "Enter your name here",
-                  labelText: "Name",
-                ),
-        
-                const SizedBox(height: 7,),
-        
                 //child 4
                 const CustomTextfield(
                   hintText: "Enter your email here",
@@ -68,7 +59,7 @@ class _SignupState extends State<Signup> {
                 const Align(
                   alignment: Alignment.centerRight,
                   child: CustomText(
-                    "Already have an account?",
+                    "Forgot your password?",
                     fontWeight: FontWeight.w500,
                     ),
                   ),
@@ -76,9 +67,27 @@ class _SignupState extends State<Signup> {
                 const SizedBox(height: 24,),
         
                 //child 7
-                CustomButton(
-                  text: "Signup",
-                  onTap: (){},
+                Container(
+                  width: 259,
+                  height: 50,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: AppColors.primaryColor,
+                    borderRadius: BorderRadius.circular(8),
+                    boxShadow: 
+                    [
+                      BoxShadow(
+                        color: AppColors.ashColor.withOpacity(.3),
+                        offset: const Offset(0, 2),
+                        blurRadius: 10,
+                      ),
+                    ]
+                  ),
+                  child: const CustomText(
+                    "Login",
+                      color: Colors.white,
+                      fontSize: 18,                   
+                  ),
                 ),
                 
               ],
@@ -89,4 +98,5 @@ class _SignupState extends State<Signup> {
     );
   }
 }
+
 
