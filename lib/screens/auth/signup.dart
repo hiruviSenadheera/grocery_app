@@ -16,24 +16,68 @@ class _SignupState extends State<Signup> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Column(
-          children: [
-
-            //child 1
-            const Text(
-              "Signup",
-              style: TextStyle(
-                fontSize: 25,
-                color: AppColors.primaryColor,
-                fontWeight: FontWeight.bold
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+        
+              //child 1
+              const Text(
+                "Signup",
+                style: TextStyle(
+                  fontSize: 25,
+                  color: AppColors.primaryColor,
+                  fontWeight: FontWeight.bold
+                ),
               ),
-            ),
+        
+              const SizedBox(height: 41,),
+        
+              //child 2
+              const AppLogo(),
 
-            const SizedBox(height: 41,),
-
-            //child 2
-            AppLogo(),
-          ],
+              const SizedBox(height: 30,),
+        
+              //child 3
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(4),
+                  color: Colors.white,
+                  boxShadow: 
+                  [
+                    BoxShadow(
+                      color: AppColors.ashColor.withOpacity(.4),
+                      offset: Offset(0, 2),
+                      blurRadius: 10,
+                    ),
+                  ]
+                ),
+                child: TextField(
+                  decoration: InputDecoration(
+                    hintText: "Enter your email here",
+                    hintStyle: TextStyle(
+                        color: AppColors.ashColor,
+                      ),
+                    label: Text(
+                      "Email",
+                      style: TextStyle(
+                        color: AppColors.ashColor,
+                      ),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(4),
+                      borderSide: BorderSide(color: Colors.white),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(4),
+                      borderSide: BorderSide(color: AppColors.primaryColor)
+                    )
+                  ),
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
