@@ -1,8 +1,6 @@
-import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:grocery_app/components/app_logo.dart';
 import 'package:grocery_app/components/custom_textfield.dart';
-import 'package:grocery_app/utils/constants/app_assets.dart';
 import 'package:grocery_app/utils/constants/app_colors.dart';
 
 class Signup extends StatefulWidget {
@@ -15,16 +13,16 @@ class Signup extends StatefulWidget {
 class _SignupState extends State<Signup> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 15),
+          padding: const EdgeInsets.symmetric(horizontal: 15),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
         
               //child 1
-              Text(
+              const Text(
                 "Signup",
                 style: TextStyle(
                   fontSize: 25,
@@ -33,40 +31,40 @@ class _SignupState extends State<Signup> {
                 ),
               ),
         
-              SizedBox(height: 41,),
+              const SizedBox(height: 41,),
         
               //child 2
-              AppLogo(),
+              const AppLogo(),
 
-              SizedBox(height: 30,),
+              const SizedBox(height: 30,),
         
               //child 3
-              CustomTextfield(
+              const CustomTextfield(
                 hintText: "Enter your name here",
                 labelText: "Name",
               ),
 
-              SizedBox(height: 7,),
+              const SizedBox(height: 7,),
 
               //child 4
-              CustomTextfield(
+              const CustomTextfield(
                 hintText: "Enter your email here",
                 labelText: "Email",
               ),
 
-              SizedBox(height: 7,),
+              const SizedBox(height: 7,),
 
               //child 5
-              CustomTextfield(
+              const CustomTextfield(
                 hintText: "Enter your password here",
                 labelText: "Password",
                 isObscure: true,
               ),
 
-              SizedBox(height: 12,),
+              const SizedBox(height: 12,),
 
               //child 6
-              Align(
+              const Align(
                 alignment: Alignment.centerRight,
                 child: Text(
                   "Already have an account?",
@@ -76,10 +74,33 @@ class _SignupState extends State<Signup> {
                 ),
               ),
 
-              SizedBox(height: 12,),
+              const SizedBox(height: 24,),
 
               //child 7
-          
+              Container(
+                width: 259,
+                height: 50,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  color: AppColors.primaryColor,
+                  borderRadius: BorderRadius.circular(8),
+                  boxShadow: 
+                  [
+                    BoxShadow(
+                      color: AppColors.ashColor.withOpacity(.3),
+                      offset: Offset(0, 2),
+                      blurRadius: 10,
+                    ),
+                  ]
+                ),
+                child: const Text(
+                  "SignUp",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                  ),
+                ),
+              ),
               
             ],
           ),
