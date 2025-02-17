@@ -4,8 +4,12 @@ class AppAssets {
   //
   //
 
-  static const String logo = "assets/icons/logo.png";
-  static const String google = "assets/icons/google.svg";
-  static const String fb = "assets/icons/fb.svg";
+  static const iconPath = "assets/icons";
+
+  static const String logo = "$iconPath/logo.png";
+  static const String google = "$iconPath/google.svg";
+  static const String fb = "$iconPath/fb.svg";
+  static const String menuIcon ="$iconPath/menu-icon.svg";
+  static const String cartIcon ="$iconPath/cart-icon.svg";
 
 }
