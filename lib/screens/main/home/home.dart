@@ -59,8 +59,16 @@ class _HomeState extends State<Home> {
                 ), 
                 itemCount: 10,
                 itemBuilder: (context, index) {
-                  return Container(
-                    color: Colors.amber,
+                  return Container(               
+                    decoration: BoxDecoration(
+                      color: Colors.amber,
+                      borderRadius: BorderRadius.circular(12),
+                      image: const DecorationImage(
+                        image: NetworkImage(AppAssets.dummyImg),
+                        fit: BoxFit.cover,
+                      )
+                    ),
+                    
                   );
                 },
               ),
