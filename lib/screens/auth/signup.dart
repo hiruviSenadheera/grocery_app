@@ -1,4 +1,7 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:grocery_app/utils/constants/app_assets.dart';
+import 'package:grocery_app/utils/constants/app_colors.dart';
 
 class Signup extends StatefulWidget {
   const Signup({super.key});
@@ -11,7 +14,34 @@ class _SignupState extends State<Signup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
+      body: Center(
+        child: Column(
+          children: [
+
+            //child 1
+            const Text(
+              "Signup",
+              style: TextStyle(
+                fontSize: 25,
+                color: AppColors.primaryColor,
+                fontWeight: FontWeight.bold
+              ),
+            ),
+
+            const SizedBox(height: 41,),
+
+            //child 2
+            FadeInDown(
+              child: Image.asset(
+                AppAssets.logo,
+                width: 202,
+                height: 138,
+                fit: BoxFit.fill,
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
