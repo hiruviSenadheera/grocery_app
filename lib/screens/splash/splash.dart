@@ -17,7 +17,7 @@ class _SplashState extends State<Splash> {
           //child 1
           Image.asset("assets/icons/logo.png"),
 
-
+          Text("Shop Your Daily Necessary")
         ],
       ),
     );
