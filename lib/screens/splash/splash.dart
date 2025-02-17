@@ -1,6 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:grocery_app/components/app_logo.dart';
+import 'package:grocery_app/components/custom_text.dart';
 import 'package:grocery_app/screens/auth/signup.dart';
 import 'package:grocery_app/utils/constants/app_assets.dart';
 import 'package:grocery_app/utils/constants/app_colors.dart';
@@ -39,7 +40,7 @@ class _SplashState extends State<Splash> {
           children: [
       
             //child 1
-            AppLogo(
+            const AppLogo(
               width: 331,
               height: 225,
             ),
@@ -48,15 +49,12 @@ class _SplashState extends State<Splash> {
       
             //child 2
             FadeInUp(
-              child: const Text(
+              child: const CustomText(
                 "Shop Your Daily \nNecessary",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                  color: AppColors.primaryColor
-                )
-                ),
+                fontSize: 30,
+                color: AppColors.primaryColor,
+                fontWeight: FontWeight.bold,
+              ),
             ),
       
           ],
@@ -65,3 +63,4 @@ class _SplashState extends State<Splash> {
     );
   }
 }
+
