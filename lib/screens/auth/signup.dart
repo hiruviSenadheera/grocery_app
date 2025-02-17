@@ -63,6 +63,23 @@ class _SignupState extends State<Signup> {
                 isObscure: true,
               ),
 
+              SizedBox(height: 12,),
+
+              //child 6
+              Align(
+                alignment: Alignment.centerRight,
+                child: Text(
+                  "Already have an account?",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+
+              SizedBox(height: 12,),
+
+              //child 7
+          
               
             ],
           ),
