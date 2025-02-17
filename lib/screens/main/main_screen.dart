@@ -11,7 +11,13 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
 
   //TO STORE THE ACTIVE BOTTOM BAR INDEX
-  final int _activeIndex = 0;
+  int _activeIndex = 0;
+
+  void onItemTapped(int i){
+      setState(() {
+           _activeIndex = i;       
+      });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -24,30 +30,22 @@ class _MainScreenState extends State<MainScreen> {
             BottomNavTile(
               icon: Icons.home,
               isActive: _activeIndex==0,
-              onTap: () {
-                
-              },
+              onTap: () => onItemTapped(0),
             ),
             BottomNavTile(
               icon: Icons.favorite_border,
               isActive: _activeIndex==1,
-              onTap: () {
-                
-              },
+              onTap: () => onItemTapped(1),
             ),
             BottomNavTile(
               icon: Icons.search,
               isActive: _activeIndex==2,
-              onTap: () {
-                
-              },
+              onTap: () => onItemTapped(2),
             ),
             BottomNavTile(
               icon: Icons.person,
               isActive: _activeIndex==3,
-              onTap: () {
-                
-              },
+              onTap: () => onItemTapped(3),
             ),
           ],
         )
