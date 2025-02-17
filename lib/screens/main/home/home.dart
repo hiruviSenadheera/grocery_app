@@ -1,6 +1,8 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:grocery_app/components/custom_text.dart';
+import 'package:grocery_app/components/product_tile.dart';
 import 'package:grocery_app/utils/constants/app_assets.dart';
 import 'package:grocery_app/utils/constants/app_colors.dart';
 
@@ -50,17 +52,19 @@ class _HomeState extends State<Home> {
 
             //child 3
             Expanded(
-              child: GridView.builder(
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  childAspectRatio: 0.75,
-                  crossAxisSpacing: 19,
-                  mainAxisSpacing: 44,
-                ), 
-                itemCount: 10,
-                itemBuilder: (context, index) {
-                  return ProductTile();
-                },
+              child: FadeInLeft(
+                child: GridView.builder(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    childAspectRatio: 0.75,
+                    crossAxisSpacing: 19,
+                    mainAxisSpacing: 44,
+                  ), 
+                  itemCount: 10,
+                  itemBuilder: (context, index) {
+                    return ProductTile();
+                  },
+                ),
               ),
             ),
 
