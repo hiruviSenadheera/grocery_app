@@ -24,6 +24,7 @@ class _LoginState extends State<Login> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
       
+                //child 1
                 Align(
                   alignment: Alignment.topLeft,
                   child: IconButton(
@@ -32,7 +33,7 @@ class _LoginState extends State<Login> {
                   ),
                 ),
           
-                //child 1
+                //child 2
                 const CustomText(
                   "Login",
                   fontSize: 25,
@@ -42,12 +43,12 @@ class _LoginState extends State<Login> {
           
                 const SizedBox(height: 41,),
           
-                //child 2
+                //child 3
                 const AppLogo(),
         
                 const SizedBox(height: 30,),
           
-                //child 3
+                //child 4
                 const CustomTextfield(
                   hintText: "Enter your email here",
                   labelText: "Email",
@@ -55,7 +56,7 @@ class _LoginState extends State<Login> {
         
                 const SizedBox(height: 7,),
         
-                //child 4
+                //child 5
                 const CustomTextfield(
                   hintText: "Enter your password here",
                   labelText: "Password",
@@ -64,7 +65,7 @@ class _LoginState extends State<Login> {
         
                 const SizedBox(height: 12,),
         
-                //child 5
+                //child 6
                 const Align(
                   alignment: Alignment.centerRight,
                   child: CustomText(
@@ -75,14 +76,23 @@ class _LoginState extends State<Login> {
         
                 const SizedBox(height: 24,),
         
-                //child 6
+                //child 7
                 CustomButton(
                   text: "Login",
                   onTap: (){},
                 ),
+
+                const SizedBox(height: 23,),
       
-                //child 7
-                
+                //child 8
+                const CustomText(
+                  "Or login with social account",
+                  fontSize: 14,
+                ),
+
+                const SizedBox(height: 12,),
+
+                //child 9
               ],
             ),
           ),
