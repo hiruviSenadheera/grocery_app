@@ -24,11 +24,11 @@ class ProductDetailsSection extends StatelessWidget {
       ),
       padding: const EdgeInsets.fromLTRB(29, 34, 29, 0),
 
-      child: const Column(
+      child: Column(
         children: [
 
           //child 1
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
 
@@ -42,10 +42,10 @@ class ProductDetailsSection extends StatelessWidget {
             ],
           ),
 
-          SizedBox(height: 21,),
+          const SizedBox(height: 21,),
 
           //child 2
-          Align(
+          const Align(
             alignment: Alignment.centerLeft,
             child: CustomText(
               "Rs. 15.00",
@@ -53,19 +53,19 @@ class ProductDetailsSection extends StatelessWidget {
             ),
           ),
 
-          SizedBox(height: 28,),
+          const SizedBox(height: 28,),
 
           //child 3
-          CustomText(
+          const CustomText(
             "Grapes  is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.",
             textAlign: TextAlign.justify,
             fontSize: 13,
           ),
 
-          SizedBox(height: 28,),
+          const SizedBox(height: 28,),
 
           //child 4
-          Align(
+          const Align(
             alignment: Alignment.centerLeft,
             child: CustomText(
               "Related items",
@@ -75,8 +75,20 @@ class ProductDetailsSection extends StatelessWidget {
             ),
           ),
 
+          const SizedBox(height: 20,),
+
           //child 5
-          RelatedItemTile()
+          SizedBox(
+            height: 100,
+            child: ListView.separated(
+              itemCount: 12,
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context,index){
+                return const RelatedItemTile();
+              },
+              separatorBuilder: (context, index) => SizedBox(width: 10,),
+            ),
+          ),
 
         ],
       ),
