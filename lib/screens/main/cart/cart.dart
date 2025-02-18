@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_app/components/common_back_button.dart';
 import 'package:grocery_app/components/custom_text.dart';
+import 'package:grocery_app/screens/main/cart/bottom_row.dart';
 import 'package:grocery_app/screens/main/cart/cart_tile.dart';
 import 'package:grocery_app/utils/constants/app_colors.dart';
 
@@ -53,6 +54,8 @@ class _CartState extends State<Cart> {
           ),
         ),
       ),
+
+      bottomNavigationBar: const BottomRow(),
     );
   }
 }
