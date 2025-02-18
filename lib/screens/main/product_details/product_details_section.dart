@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_app/components/custom_text.dart';
+import 'package:grocery_app/screens/main/product_details/counter_section.dart';
 import 'package:grocery_app/utils/helpers/size_config.dart';
 
 class ProductDetailsSection extends StatelessWidget {
@@ -35,7 +36,7 @@ class ProductDetailsSection extends StatelessWidget {
                 fontWeight: FontWeight.w600,
               ),
 
-              
+              CounterSection(),
             ],
           ),
 
@@ -45,3 +46,4 @@ class ProductDetailsSection extends StatelessWidget {
     );
   }
 }
+
