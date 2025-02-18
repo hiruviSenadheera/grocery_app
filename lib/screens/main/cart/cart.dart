@@ -14,13 +14,13 @@ class Cart extends StatefulWidget {
 class _CartState extends State<Cart> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SafeArea(
         child: Center(
           child: Column(
             children: [
 
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   CommonBackButton(),
@@ -36,9 +36,19 @@ class _CartState extends State<Cart> {
                 ],
               ),
 
-              SizedBox(height: 18,),
+              const SizedBox(height: 18,),
 
-              CartTile()
+              Expanded(
+                child: ListView.separated(
+                  itemBuilder: (context,index){
+                    return const CartTile();
+                  }, 
+                  separatorBuilder: (context,index){
+                    return const SizedBox(height: 20,);
+                  }, 
+                  itemCount: 10
+                ),
+              ),
             ],
           ),
         ),
