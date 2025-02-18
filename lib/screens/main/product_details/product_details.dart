@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_app/utils/constants/app_assets.dart';
 import 'package:grocery_app/utils/constants/app_colors.dart';
 import 'package:grocery_app/utils/helpers/size_config.dart';
 
@@ -15,10 +16,14 @@ class _ProductDetailsState extends State<ProductDetails> {
 
     return Scaffold(
       body: Container(
-        height: 256,
+        height: 290,
         width: SizeConfig.w(context),
         decoration: const BoxDecoration(
           color: AppColors.primaryColor,
+          image: DecorationImage(
+            image: NetworkImage(AppAssets.dummyImg),
+            fit: BoxFit.cover,
+          )
         ),
       ),
     );
