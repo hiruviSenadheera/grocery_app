@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_app/components/common_back_button.dart';
 import 'package:grocery_app/components/custom_text.dart';
+import 'package:grocery_app/screens/main/cart/cart_tile.dart';
 import 'package:grocery_app/utils/constants/app_colors.dart';
 
 class Cart extends StatefulWidget {
@@ -18,6 +19,7 @@ class _CartState extends State<Cart> {
         child: Center(
           child: Column(
             children: [
+
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -33,6 +35,10 @@ class _CartState extends State<Cart> {
                   Icon(Icons.abc,color: Colors.white,),
                 ],
               ),
+
+              SizedBox(height: 18,),
+
+              CartTile()
             ],
           ),
         ),
@@ -40,3 +46,4 @@ class _CartState extends State<Cart> {
     );
   }
 }
+
