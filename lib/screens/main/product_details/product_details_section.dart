@@ -90,6 +90,9 @@ class ProductDetailsSection extends StatelessWidget {
             ),
           ),
 
+          //child 6
+          
+
         ],
       ),
     );
