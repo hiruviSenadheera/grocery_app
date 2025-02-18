@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:grocery_app/components/custom_text.dart';
 import 'package:grocery_app/components/product_tile.dart';
+import 'package:grocery_app/screens/main/cart/cart.dart';
 import 'package:grocery_app/utils/constants/app_assets.dart';
 import 'package:grocery_app/utils/constants/app_colors.dart';
+import 'package:grocery_app/utils/helpers/helpers.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -32,8 +34,13 @@ class _HomeState extends State<Home> {
                   AppAssets.menuIcon
                 ),
       
-                SvgPicture.asset(
-                  AppAssets.cartIcon
+                InkWell(
+                  onTap: () {
+                    Helpers.navigateTo(context, const Cart());
+                  },
+                  child: SvgPicture.asset(
+                    AppAssets.cartIcon
+                  ),
                 ),
               ],
             ),
