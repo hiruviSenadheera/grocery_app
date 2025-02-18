@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_app/components/custom_text.dart';
 import 'package:grocery_app/screens/main/product_details/counter_section.dart';
+import 'package:grocery_app/utils/constants/app_colors.dart';
 import 'package:grocery_app/utils/helpers/size_config.dart';
 
 class ProductDetailsSection extends StatelessWidget {
@@ -40,6 +41,38 @@ class ProductDetailsSection extends StatelessWidget {
             ],
           ),
 
+          SizedBox(height: 21,),
+
+          //child 2
+          Align(
+            alignment: Alignment.centerLeft,
+            child: CustomText(
+              "Rs. 15.00",
+              fontSize: 14,
+            ),
+          ),
+
+          SizedBox(height: 28,),
+
+          //child 3
+          CustomText(
+            "Grapes  is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.",
+            textAlign: TextAlign.justify,
+            fontSize: 13,
+          ),
+
+          SizedBox(height: 28,),
+
+          //child 4
+          Align(
+            alignment: Alignment.centerLeft,
+            child: CustomText(
+              "Related items",
+              fontSize: 14,
+              fontWeight: FontWeight.w600,
+              color: AppColors.primaryColor,
+            ),
+          ),
 
         ],
       ),
