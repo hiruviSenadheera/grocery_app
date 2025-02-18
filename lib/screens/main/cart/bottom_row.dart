@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:grocery_app/components/custom_button.dart';
 import 'package:grocery_app/components/custom_text.dart';
+import 'package:grocery_app/screens/main/cart/dialog_box.dart';
+import 'package:grocery_app/utils/constants/app_assets.dart';
+import 'package:grocery_app/utils/constants/app_colors.dart';
 
 class BottomRow extends StatelessWidget {
   const BottomRow({
@@ -39,13 +43,25 @@ class BottomRow extends StatelessWidget {
           const SizedBox(height: 20,),
           CustomButton(
             text: "Place Order", 
-            onTap: (){},
+            onTap: (){
+              showDialog(
+                context: context, 
+                // barrierDismissible: false,
+                builder: (context){
+                  return const Dialog(
+                    child: DialogBox(),
+                  );
+                }
+              );
+            },
           )
         ],
       ),
     );
   }
 }
+
+
 
 class CartAmountRow extends StatelessWidget {
   const CartAmountRow({
