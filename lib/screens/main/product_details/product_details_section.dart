@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_app/components/custom_text.dart';
 import 'package:grocery_app/screens/main/product_details/counter_section.dart';
+import 'package:grocery_app/screens/main/product_details/related_item_tile.dart';
 import 'package:grocery_app/utils/constants/app_colors.dart';
 import 'package:grocery_app/utils/helpers/size_config.dart';
 
@@ -73,6 +74,9 @@ class ProductDetailsSection extends StatelessWidget {
               color: AppColors.primaryColor,
             ),
           ),
+
+          //child 5
+          RelatedItemTile()
 
         ],
       ),
